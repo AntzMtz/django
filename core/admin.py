@@ -3,6 +3,7 @@ from .models import *
 
 
 # Register your models here.
-admin.site.register(Usuarios)
+admin.site.register(Usuario)
 admin.site.register(Proyectos)
 admin.site.register(Materiales)
+admin.site.register(Materia)

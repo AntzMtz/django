@@ -1,0 +1,32 @@
+{% extends "pagi/navegador.html" %}
+{% block titulo %}Directorio{% endblock %}
+{% block contenido %}
+
+<div id="cont_materias" class="container col-12" style="margin-top: 80px;">
+    <table class="table table-striped listado">
+        <tr>
+            <th>Nombre</th>
+            <th>paterno</th>
+            <th>materno</th>
+            <th>Estatus</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        {% for e in personas %}
+        <tr>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.paterno }}</td>
+            <td>{{ e.materno }}</td>
+            <td>{{ e.get_estatus_display }}</td>
+            <td><a href="{% url 'modi_persona' e.id %}"><input type="button" name="Edit" value="Edit"> </a> </td>
+            <td><a href="{% url 'dele_persona' e.id %}"><input type="button" name="Delete" value="Borrar"> </a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% for m in materias %}
+<p>{{ m.nombre }}</p>
+{% endfor %}
+
+{% endblock %}

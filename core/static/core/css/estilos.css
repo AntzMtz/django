@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
 body {
-    background: #119c4d;
-    background: -webkit-linear-gradient(to right, #292E49, #1791d8, #BBD2C5);
-    background: linear-gradient(to right, #25251e, #0396eb, #279b59);
+   
+    background-color: rgb(235, 235, 243);
 
 }
 
-h1 {
-    color: rgb(255, 0, 119);
+span {
+    color: rgb(0, 0, 0);
+    font: bold;
+}
+
+.temp{
+    background-color:black;
 }

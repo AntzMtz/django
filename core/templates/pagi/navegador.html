@@ -1,0 +1,42 @@
+{% extends "pagi/base.html" %}
+{% load static %}
+{% block titulo %}{% endblock %}
+{% block navegador %}
+<div class=" temp ">
+    <nav class="navbar navbar-expand-lg                 
+    navbar-expand-sm justify-content-between navbar-dark  sc-kstqJO gbxGXs temp
+                 ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="{% static '/img/Baby-Yoda-300.png' %}" width="40" height="40" alt="HBO Max Logo" />{{usuarioGlo.nombre}}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <div class="justify-content-end  d-sm-flex">
+                    <div class="nav-item secondary-cta"><a
+                            class="sc-kEjbQP dBWzrh btn px-4 rounded-pill btn--secondary-outlined btn-sm btn-outline-light"
+                            href="/users/signin" target="_top" role="button" rel="noopener">INGRESA</a>
+                    </div>
+                    <div class="nav-item secondary-cta"><a
+                            class="sc-kEjbQP dBWzrh btn px-4 rounded-pill btn--secondary-outlined btn-sm btn-outline-light"
+                            href="/users/signup" target="_top" role="button" rel="noopener">Suscríbete
+                            ahora</a>
+                    </div>
+                    <div class="nav-item secondary-cta"><a
+                            class="sc-kEjbQP dBWzrh btn px-4 rounded-pill btn--secondary-outlined btn-sm btn-outline-light"
+                            href="/users/logout" target="_top" role="button" rel="noopener">Salir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+{% block contenido %}
+{% endblock %}
+{% endblock %}

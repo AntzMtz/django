@@ -1,0 +1,42 @@
+{% extends "pagi/navegador.html" %}
+{% block titulo %}Directorio{% endblock %}
+{% block contenido %}
+<h1>Hola</h1>
+<div class="col-md-10 mx-auto  ">
+    <div class="card ">
+        <div class="card-body ">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th>Usuario</td>
+                        <th>Nombre</td>
+                        <th>Apellido Paterno</td>
+                        <th>Apellido Paterno</td>
+                        <th>Correo</td>
+                        <th> Telefono </td>
+                        <th>Password</td>
+                        <th>Roll</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in personas %}
+                    <tr>
+
+                        <td>{{ persona.UserAcces }}</td>
+                        <td>{{ persona.Nombre }}</td>
+                        <td>{{ persona.ApellidoPaterno }}</td>
+                        <td>{{ persona.ApellidoMaterno }}</td>
+                        <td>{{ persona.Correo }}</td>
+                        <td>{{ persona.Telefono }}</td>
+                        <td>{{ persona.Pass }}</td>
+                        <td>{{ persona.Roll }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<h1>adios</h1>
+{% endblock %}
